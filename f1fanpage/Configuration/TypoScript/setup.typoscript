@@ -1,0 +1,39 @@
+######################
+#### DEPENDENCIES ####
+######################
+@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        theme = EXT:f1fanpage/Resources/Public/Scss/Theme/theme.scss
+        css = https://use.fontawesome.com/releases/v6.4.2/css/all.css
+        css {
+            external = 1
+            media = all
+            excludeFromConcatenation = 1
+        }
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        f1fanpage_scripts = EXT:f1fanpage/Resources/Public/JavaScript/Dist/scripts.js
+    }
+}

@@ -1,0 +1,63 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:f1fanpage/Resources/Public/Images/Logo-bunt_weiß.png
+        fileInverted = EXT:f1fanpage/Resources/Public/Images/Logo-bunt_weiß.png
+        height = 200
+        width = 350
+        alt = F1Fanpage
+        linktitle = F1Fanpage
+    }
+    favicon {
+        file = EXT:f1fanpage/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:f1fanpage/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:f1fanpage/Resources/Private/Partials/Page/
+        templateRootPath = EXT:f1fanpage/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:f1fanpage/Resources/Private/Layouts/
+        partialRootPath = EXT:f1fanpage/Resources/Private/Partials/
+        templateRootPath = EXT:f1fanpage/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:f1fanpage/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:f1fanpage/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:f1fanpage/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #eb3e4a
+    secondary = #013859
+}
+
+page.theme.footernavigation.navigationType = Directory
+page.theme.footernavigation.navigationValue = 34
